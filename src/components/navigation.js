@@ -1,7 +1,6 @@
 import {NavLink} from 'react-router-dom'
 
-const Navigation = (event) => {
-  // event.preventDefault();
+const Navigation = () => {
   return (
       <nav className="navigation">
         <ul className="header-navigation">
@@ -46,4 +45,4 @@ const Navigation = (event) => {
   );
 };
 
-export default Navigation;
+export {Navigation};

@@ -28,4 +28,4 @@ const MainPageWrapper = () => {
     );
   };
   
-  export default MainPageWrapper;
+  export {MainPageWrapper};

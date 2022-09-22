@@ -13,4 +13,4 @@ const HeaderImgBox = () => {
     );
   };
   
-  export default HeaderImgBox;
+  export {HeaderImgBox};

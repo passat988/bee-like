@@ -1,4 +1,4 @@
-import MainPageWrapper from "./main-page-wrapper";
+import {MainPageWrapper} from "./main-page-wrapper";
 
 const MainPageSection = () => {
   return (
@@ -10,4 +10,4 @@ const MainPageSection = () => {
   );
 };
 
-export default MainPageSection;
+export {MainPageSection};

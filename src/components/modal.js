@@ -1,4 +1,4 @@
-import Form from "./form";
+import {Form} from "./form";
 
 const Modal = () => {
   const closeForm = function (){
@@ -21,4 +21,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export {Modal};

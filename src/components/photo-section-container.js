@@ -16,4 +16,4 @@ const PhotoSectionContainer = () => {
   );
 };
 
-export default PhotoSectionContainer;
+export  {PhotoSectionContainer};

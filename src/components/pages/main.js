@@ -1,4 +1,4 @@
-import Wrapper from "../wrapper";
+import {Wrapper} from "../wrapper";
 
 const Main = () => {
   return (
@@ -8,4 +8,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export {Main};

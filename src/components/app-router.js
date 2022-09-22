@@ -1,8 +1,8 @@
-import Main from "./pages/main";
+import {Main} from "./pages/main";
 import {Routes, Route} from 'react-router-dom'
-import Honey from "./pages/honey";
-import Tools from "./pages/tools";
-import Offer from "./pages/offer";
+import {Honey} from "./pages/honey";
+import {Tools} from "./pages/tools";
+import {Offer} from "./pages/offer";
 
 const AppRouter = () => {
   return (
@@ -16,4 +16,4 @@ const AppRouter = () => {
   );
 };
 
-export default AppRouter;
+export {AppRouter};

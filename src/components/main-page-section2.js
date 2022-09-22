@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import CatalogItem from "./catalog-item";
+import {CatalogItem} from "./catalog-item";
 
 const MainPageSection2 = () => {
   const requestURL = "https://queenlyrain.backendless.app/api/data/items";
@@ -26,4 +26,4 @@ const MainPageSection2 = () => {
   );
 };
 
-export default MainPageSection2;
+export {MainPageSection2};

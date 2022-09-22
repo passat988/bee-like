@@ -37,4 +37,4 @@ const CatalogItem = (props) => {
   
 };
 
-export default CatalogItem;
+export {CatalogItem};

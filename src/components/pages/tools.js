@@ -1,11 +1,11 @@
-import MainPageSection3 from "../main-page-section3";
+import {MainPageSection3} from "../main-page-section3";
 
 const Tools = () => {
     return (
-      <div>
+      <div className="wrapper">
         <MainPageSection3/>
       </div>
     );
   };
   
-  export default Tools
+  export {Tools}

@@ -18,4 +18,4 @@ const MobileMenu = () => {
   );
 };
 
-export default MobileMenu;
+export {MobileMenu};

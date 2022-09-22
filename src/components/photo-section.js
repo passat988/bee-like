@@ -1,4 +1,4 @@
-import PhotoSectionContainer from "./photo-section-container";
+import {PhotoSectionContainer} from "./photo-section-container";
 
 const PhotoSection = () => {
     return (
@@ -8,4 +8,4 @@ const PhotoSection = () => {
     );
   };
   
-  export default PhotoSection;
+  export {PhotoSection};

@@ -36,4 +36,4 @@ const ThemeSwitchWrapper = () => {
   );
 };
 
-export default ThemeSwitchWrapper;
+export {ThemeSwitchWrapper};

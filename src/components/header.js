@@ -1,7 +1,7 @@
-import HeaderImgBox from "./header_img_box";
-import MobileMenu from "./mobile-menu";
-import Navigation from "./navigation";
-import ThemeSwitchWrapper from "./theme-switch-wrapper";
+import {HeaderImgBox} from "./header_img_box";
+import {MobileMenu} from "./mobile-menu";
+import {Navigation} from "./navigation";
+import {ThemeSwitchWrapper} from "./theme-switch-wrapper";
 
 const Header = () => {
 
@@ -16,4 +16,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export {Header};
