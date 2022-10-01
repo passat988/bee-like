@@ -1,12 +1,13 @@
-import { Modal } from "../modal";
+import { Modal } from "../components/modal";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import copyImg from '../styles/img/copy.jpg'
 
 const Offer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
     console.log(isModalOpen);
-  }, );
+  },);
   return (
     <div className="wrapper">
       <section className="main-page-section main-page-section2">
@@ -24,7 +25,7 @@ const Offer = () => {
                       Робити ваші замовлення Ви можете за телефоном
                       <span className="number-and-img">
                         <a className="phone-number">+380 098 96 56 054 </a>
-                        <img className="copy-img" src="./img/copy.jpg" alt="" />
+                        <img className="copy-img" src={ copyImg } alt=""/>
                       </span>
                       або заповнити форму нижче
                     </li>
@@ -51,7 +52,7 @@ const Offer = () => {
                 id="myBtn"
                 className="catalog-link-button catalog-link"
                 value="Форма для замовлення"
-                onClick={()=>{
+                onClick={ () => {
                   setIsModalOpen(true)
                   console.log(isModalOpen)
                 }
@@ -59,7 +60,7 @@ const Offer = () => {
               >
                 Форма для замовлення
               </button>
-              <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+              <Modal isModalOpen={ isModalOpen } setIsModalOpen={ setIsModalOpen }/>
             </div>
           </div>
         </div>
