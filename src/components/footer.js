@@ -1,21 +1,22 @@
 import copyimg from '../styles/img/copy.jpg'
 
-const copyPhone = function (event)  {
-  const number = document.querySelector(".phone-number");
-  const copyImg = event.target;
-  navigator.clipboard.writeText(number.innerHTML);
-};
 
- const copyControl = function ()  {
-  const copyToast = document.querySelector(".copyed");
-  copyToast.classList.add("copyed_active");
-
-  setTimeout(() => {
-    copyToast.classList.remove("copyed_active");
-  }, 2000);
-};
 
 const Footer = () => {
+  const copyPhone = function (event)  {
+    const number = document.querySelector(".phone-number");
+    const copyImg = event.target;
+    navigator.clipboard.writeText(number.innerHTML);
+  };
+  
+   const copyControl = function ()  {
+    const copyToast = document.querySelector(".copyed");
+    copyToast.classList.add("copyed_active");
+  
+    setTimeout(() => {
+      copyToast.classList.remove("copyed_active");
+    }, 2000);
+  };
   return (
     <footer>
       <span className="copyed">Скопійовано!</span>
@@ -32,3 +33,5 @@ const Footer = () => {
 };
 
 export {Footer};
+
+// className={(isModalOpen)? "modal modalblock" : "modal"}

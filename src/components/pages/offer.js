@@ -1,11 +1,12 @@
 import { Modal } from "../modal";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Offer = () => {
-  const createForm = function () {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "block";
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    console.log(isModalOpen);
+  }, );
   return (
     <div className="wrapper">
       <section className="main-page-section main-page-section2">
@@ -50,11 +51,15 @@ const Offer = () => {
                 id="myBtn"
                 className="catalog-link-button catalog-link"
                 value="Форма для замовлення"
-                onClick={createForm}
+                onClick={()=>{
+                  setIsModalOpen(true)
+                  console.log(isModalOpen)
+                }
+                }
               >
                 Форма для замовлення
               </button>
-              <Modal />
+              <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
             </div>
           </div>
         </div>
@@ -62,5 +67,4 @@ const Offer = () => {
     </div>
   );
 };
-
 export { Offer };

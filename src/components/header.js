@@ -5,7 +5,6 @@ import {ThemeSwitchWrapper} from "./theme-switch-wrapper";
 
 const Header = () => {
 
-  console.log('1');
   return (
     <header>
       <HeaderImgBox />
