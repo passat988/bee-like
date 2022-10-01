@@ -1,20 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const ThemeSwitchWrapper = () => {
+  const toggleSwitch = useRef(null)
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme")
       ? localStorage.getItem("theme")
       : null;
     if (currentTheme) {
       document.documentElement.setAttribute("data-theme", currentTheme);
-      const toggleSwitch = document.querySelector(
-        '.theme-switch input[type="checkbox"]'
-      );
+      ;
       if (currentTheme === "dark") {
         toggleSwitch.checked = true;
       }
     }
-  });
+  },[]);
 
   const switchTheme = function (e) {
     if (e.target.checked) {
@@ -29,7 +28,7 @@ const ThemeSwitchWrapper = () => {
   return (
     <div className="theme-switch-wrapper">
       <label className="theme-switch" htmlFor="checkbox">
-        <input type="checkbox" id="checkbox" onClick={switchTheme} />
+        <input ref={toggleSwitch} type="checkbox" id="checkbox" onClick={switchTheme} />
         <div className="slider round"></div>
       </label>
     </div>

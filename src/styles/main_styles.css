@@ -1,6 +1,7 @@
 @import url(./main_page_styles.css);
 @import url(./photo_section_and_location.css);
 @import url(./pages.css);
+@import url(./admin_form_page.css);
 
 @font-face {
     font-family: Lobster-Regular;

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import {CatalogItem} from "./catalog-item";
 
 const MainPageSection2 = () => {
-  const requestURL = "https://queenlyrain.backendless.app/api/data/items";
+  const requestURL = "https://civicwheel.backendless.app/api/services/ProductService/products";
 
   useEffect(() => {
     getRequest();
@@ -12,8 +12,7 @@ const MainPageSection2 = () => {
     let response = await fetch(requestURL);
     let content = await response.json();
     console.log(content);
-    let catalogList = document.querySelector(".catalog");
-      <CatalogItem props={content}/>
+      <CatalogItem content={content}/>
   }
 
   return (

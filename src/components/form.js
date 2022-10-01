@@ -1,20 +1,6 @@
-const Form = () => {
-  const invisibleBlock = function () {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
-    console.log('3');
-  };
-
-  const missClick = function (event) {
-    const modal = document.getElementById("myModal"); 
-    if (event.target == modal) {
-      modal.style.display = "none";
-      console.log('3');
-    }
-  };
-
-  document.addEventListener("click", missClick, false);
-
+const Form = (props) => {
+  const setIsModalOpen = props.setIsModalOpen
+  
   const formSubmit = function (event) {
     event.preventDefault();
     let url = "https://jsonplaceholder.typicode.com/posts";
@@ -23,8 +9,7 @@ const Form = () => {
     for (const entry of data) {
       console.log(entry);
     }
-
-    invisibleBlock();
+    setIsModalOpen(false);
   };
 
   return (

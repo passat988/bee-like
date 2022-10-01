@@ -309,7 +309,6 @@ nav{
 }
 
 .modal{
-    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -318,6 +317,14 @@ nav{
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.none{
+    display: none;
+}
+
+.modalblock{
+    display: block;
 }
 
 .modal-content{
