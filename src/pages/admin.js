@@ -1,35 +1,13 @@
-import { useState } from "react";
-import Backendless from "backendless";
+import { useState } from 'react'
+import Backendless from 'backendless'
+
+import { RadioGroup } from '../components/basic'
 
 const defaultState = {
-  name  : "",
-  price : "",
-  type  : "items",
-  imgURL: "",
-};
-
-const RadioButton = ({ value, label, checked, onChange }) => (
-  <label>
-    <input checked={ checked } onChange={ onChange } type="radio" value={ value }/>
-    { label }
-  </label>
-)
-
-
-function RadioGroup({ options, value, onChange }) {
-  return (
-    <>
-      { options.map((option, i) => (
-        <RadioButton
-          key={ i }
-          value={ option.value }
-          label={ option.label }
-          checked={ option.value === value }
-          onChange={ () => onChange(option.value) }
-        />
-      )) }
-    </>
-  )
+  name  : '',
+  price : '',
+  type  : 'items',
+  imgURL: '',
 }
 
 const options = [
@@ -38,19 +16,19 @@ const options = [
 ]
 
 const Admin = () => {
-  const [state, setState] = useState(defaultState);
+  const [state, setState] = useState(defaultState)
 
-  const typeHandler = type => setState(state => ({ ...state, type }));
+  const typeHandler = type => setState(state => ({ ...state, type }))
 
   const onSubmit = async e => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      await Backendless.Data.of("Products").save(state)
+      await Backendless.Data.of('Products').save(state)
     } catch (err) {
       throw err
     }
-  };
+  }
 
   return (
     <div className="admin-form wrapper">
@@ -62,9 +40,8 @@ const Admin = () => {
             type="text"
             name="name"
             value={ state.name }
-            onChange={ (e) =>
-              setState((state) => ({ ...state, name: e.target.value }))
-            }
+            onChange={ e =>
+              setState(state => ({ ...state, name: e.target.value })) }
             required
           />
         </div>
@@ -79,9 +56,8 @@ const Admin = () => {
               type="text"
               name="price"
               value={ state.price }
-              onChange={ (e) =>
-                setState((state) => ({ ...state, price: e.target.value }))
-              }
+              onChange={ e =>
+                setState(state => ({ ...state, price: e.target.value })) }
             />
           </label>
 
@@ -93,9 +69,8 @@ const Admin = () => {
             type="text"
             name="item_image"
             value={ state.imgURL }
-            onChange={ (e) =>
-              setState((state) => ({ ...state, imgURL: e.target.value }))
-            }
+            onChange={ e =>
+              setState(state => ({ ...state, imgURL: e.target.value })) }
             required
           />
         </div>
@@ -103,7 +78,7 @@ const Admin = () => {
         <button type="submit"> Відправити</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export { Admin };
+export { Admin }

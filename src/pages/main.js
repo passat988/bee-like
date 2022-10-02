@@ -1,7 +1,7 @@
-import { Wrapper } from "../components/wrapper";
-import { MainPageSection } from "../components/main-page-section";
-import { PhotoSection } from "../components/photo-section";
-import { Gallery } from "../components";
+import { Gallery } from '../components'
+import { MainPageSection } from '../components/main-page-section'
+import { PhotoSection } from '../components/photo-section'
+import { Wrapper } from '../components/wrapper'
 
 export const Main = () => (
   <div>
@@ -11,5 +11,4 @@ export const Main = () => (
       <Gallery/>
     </Wrapper>
   </div>
-);
-
+)

@@ -1,28 +1,32 @@
-import { useEffect } from "react";
-import {CatalogItem} from "./catalog-item";
+import { useEffect, useState } from 'react'
+
+// import { CatalogItem } from './catalog-item'
+
+const requestURL = 'https://civicwheel.backendless.app/api/services/ProductService/products'
 
 const MainPageSection2 = () => {
-  const requestURL = "https://civicwheel.backendless.app/api/services/ProductService/products";
+  const [items, setItems] = useState([])
 
   useEffect(() => {
-    getRequest();
-  }, []);
+    fetchItems()
+  }, [])
 
-  async function getRequest() {
-    let response = await fetch(requestURL);
-    let content = await response.json();
-    console.log(content);
-      <CatalogItem content={content}/>
+  async function fetchItems() {
+    const response = await fetch(requestURL)
+
+    setItems(await response.json())
   }
 
   return (
     <section className="main-page-section main-page-section2">
       <div className="main-page-wrapper main-page-wrapper2">
         <h1 className="main-heading">Різновиди меду</h1>
-        <div className="catalog"></div>
+        <div className="catalog">
+          { items }
+        </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export {MainPageSection2};
+export { MainPageSection2 }

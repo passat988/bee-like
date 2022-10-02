@@ -2,47 +2,21 @@
 @import url(./photo_section_and_location.css);
 @import url(./pages.css);
 @import url(./admin_form_page.css);
+@import url(./scroll.css);
+@import url(./font.css);
+@import url(./theme.css);
 
-@font-face {
-    font-family: Lobster-Regular;
-    src: url(../styles/font/Lobster-Regular.ttf);
-}
-
-@font-face {
-    font-family: Oswald;
-    src: url(../styles/font/Oswald-VariableFont_wght.ttf);
-}
-
-:root{
-    --color-main-headers:#ffa52e;
-    --font-color: #ffffff;
-    --transparent-background: rgba(53, 53, 53, 0.8);
-    --secondary-background: rgba(255, 255, 255, 0.8);
-    --burger-background:rgba(0, 0, 0, 0.9);
-    --slider-pos: 4px;
-}
-
-[data-theme="dark"] {
-    --color-main-headers:#000;
-    --font-color: #000;
-    --transparent-background: rgba(255, 255, 255, 0.55);
-    --secondary-background: rgba(53, 53, 53, 0.8);
-    --burger-background:rgba(255, 255, 255, 0.9);
-    --switch-lable: 60px;
-    --slider-pos: 30px;
-}
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: Oswald, serif;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,18 +28,18 @@ footer{
     bottom: 0;
 }
 
-.footer-location-text, .footer-name-text{
+.footer-location-text, .footer-name-text {
     margin-left: 30px;
     margin-right: 13px;
     text-align: center;
 }
 
-footer a{
+footer a {
     color: var(--color-main-headers);
 }
 
-@media screen and (max-width: 768px){
-    .footer-location-text{
+@media screen and (max-width: 768px) {
+    .footer-location-text {
         display: none;
     }
 }
@@ -81,9 +55,9 @@ footer a{
     position: relative;
     width: 60px;
 }
-  
+
 .theme-switch input {
-    display:none;
+    display: none;
 }
 
 .slider {
@@ -95,8 +69,8 @@ footer a{
     right: 0;
     top: 0;
     transition: .4s;
-  }
-  
+}
+
 .slider:before {
     background-color: var(--color-main-headers);
     bottom: 4px;
@@ -107,26 +81,24 @@ footer a{
     transition: .4s;
     width: 26px;
 }
-  
+
 input:checked + .slider {
     background-color: var(--secondary-background);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     [data-theme="dark"] {
         --slider-pos: 17px
     }
-    
+
     .theme-switch {
-    height: 21px;
-    width: 34px;
+        height: 21px;
+        width: 34px;
     }
 
-    .slider:before{
+    .slider:before {
         left: var(--slider-pos);
         width: 13px;
         height: 13px;
-    }   
-
-   
+    }
 }

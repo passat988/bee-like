@@ -1,40 +1,31 @@
-import { useRef, useState } from "react";
-import { Form } from "./form";
+import { useRef } from 'react'
+import cn from 'classnames'
 
-const Modal = (props) => {
-  const isModalOpen = props.isModalOpen
-  const setIsModalOpen = props.setIsModalOpen
+import { useClickOutside } from '../hooks'
+import { Form } from './form'
 
-  const myModal = useRef(null);
+export const Modal = ({ isModalOpen, setIsModalOpen }) => {
+  const modalRef = useRef()
 
-  const missClick = function (event) {
-    if (event.target == myModal) {
-      myModal.style.display = "none";
-      setIsModalOpen(false)
-    }
-  };
- document.addEventListener("click", missClick, false);
-
- 
+  useClickOutside(modalRef, () => setIsModalOpen(false))
 
   if (!isModalOpen) {
-    return null;
-  } else {
-    return (
-      <div id="myModal" ref={myModal} className={(isModalOpen)? "modal modalblock" : "modal none"}>
-        <div className="modal-content">
-          <span className="close" onClick={()=>setIsModalOpen(false)}>
-            &times;</span>
-          <div className="form-wrap">
-            <div className="profile">
-              <h1>Замовити</h1>
-            </div>
-            <Form setIsModalOpen={setIsModalOpen}/>
+    return null
+  }
+
+  return (
+    <div className={ cn('modal', isModalOpen ? 'block' : 'none') }>
+      <div className="modal-content" ref={ modalRef }>
+          <span className="close" onClick={ () => setIsModalOpen(false) }>
+            &times;
+          </span>
+        <div className="form-wrap">
+          <div className="profile">
+            <h1>Замовити</h1>
           </div>
+          <Form setIsModalOpen={ setIsModalOpen }/>
         </div>
       </div>
-    );
-  }
-};
-
-export { Modal };
+    </div>
+  )
+}
