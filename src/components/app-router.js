@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import {Honey} from "../pages/honey";
 import {Tools} from "../pages/tools";
 import {Offer} from "../pages/offer";
-import { Admin } from "../pages/admin";
+import { Admin } from "../pages/admin/admin";
 
 const AppRouter = () => {
   return (
