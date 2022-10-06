@@ -1,5 +1,4 @@
-import {MainPageSection2} from "../main-page-section2";
-
+import {MainPageSection2} from "../components/main-page-section2";
 
 const Honey = () => {
     return (

@@ -1,4 +1,4 @@
-import {MainPageSection3} from "../main-page-section3";
+import {MainPageSection3} from "../components/main-page-section3";
 
 const Tools = () => {
     return (

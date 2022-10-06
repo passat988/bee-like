@@ -1,16 +1,17 @@
 import { useEffect, useRef } from "react";
 
 const ThemeSwitchWrapper = () => {
-  const toggleSwitch = useRef(null)
+  const toggleSwitchRef = useRef(null)
+
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme")
       ? localStorage.getItem("theme")
       : null;
     if (currentTheme) {
       document.documentElement.setAttribute("data-theme", currentTheme);
-      ;
+
       if (currentTheme === "dark") {
-        toggleSwitch.checked = true;
+        toggleSwitchRef.current.checked = true;
       }
     }
   },[]);
@@ -28,8 +29,8 @@ const ThemeSwitchWrapper = () => {
   return (
     <div className="theme-switch-wrapper">
       <label className="theme-switch" htmlFor="checkbox">
-        <input ref={toggleSwitch} type="checkbox" id="checkbox" onClick={switchTheme} />
-        <div className="slider round"></div>
+        <input ref={toggleSwitchRef} type="checkbox" id="checkbox" onClick={switchTheme} />
+        <div className="slider round"/>
       </label>
     </div>
   );

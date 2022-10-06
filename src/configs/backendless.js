@@ -1,0 +1,7 @@
+const config = {
+  "APP_ID" : "B7C0D037-45EF-4404-FF39-93A2C8A23F00",
+  "API_KEY": "6B2871D1-D777-45E8-A321-4B8BD3E837D3"
+}
+
+
+export default config
