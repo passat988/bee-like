@@ -1,0 +1,18 @@
+:root {
+    --color-main-headers: #ffa52e;
+    --font-color: #ffffff;
+    --transparent-background: rgba(53, 53, 53, 0.8);
+    --secondary-background: rgba(255, 255, 255, 0.8);
+    --burger-background: rgba(0, 0, 0, 0.9);
+    --slider-pos: 4px;
+}
+
+[data-theme="dark"] {
+    --color-main-headers: #000;
+    --font-color: #000;
+    --transparent-background: rgba(255, 255, 255, 0.55);
+    --secondary-background: rgba(53, 53, 53, 0.8);
+    --burger-background: rgba(255, 255, 255, 0.9);
+    --switch-lable: 60px;
+    --slider-pos: 30px;
+}

@@ -1,10 +1,12 @@
-import KolyaPhoto from '../styles/img/118200914_363529841304670_3523098714375215375_n.jpg'
+import './style.css'
 
-const PhotoSectionContainer = () => {
-  return (
+import Nicolas from './nicolas-photo.jpg'
+
+export const PhotoSection = () => (
+  <div className="photo-section">
     <div className="photo-section-container">
       <div className="photo-container">
-        <img src={KolyaPhoto} />
+        <img src={ Nicolas } alt="Nicolas"/>
       </div>
       <p className="photo-section-paragraph">
         Розповім трохи про себе. Мене звати Микола. Я займаюсь пасічництвом з 15
@@ -13,7 +15,5 @@ const PhotoSectionContainer = () => {
         продукт людям.
       </p>
     </div>
-  );
-};
-
-export  {PhotoSectionContainer};
+  </div>
+)

@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Catalog } from './catalog-item'
 
 // import { CatalogItem } from './catalog-item'
 
-const requestURL = 'https://civicwheel.backendless.app/api/data/Products'
+const requestURL = 'https://civicwheel.backendless.app/api/services/ProductService/products'
 
 const MainPageSection2 = () => {
   const [items, setItems] = useState([])
@@ -16,7 +15,6 @@ const MainPageSection2 = () => {
     const response = await fetch(requestURL)
 
     setItems(await response.json())
-    console.log(items);
   }
 
   
@@ -26,11 +24,11 @@ const MainPageSection2 = () => {
       <div className="main-page-wrapper main-page-wrapper2">
         <h1 className="main-heading">Різновиди меду</h1>
         <div className="catalog">
-        <Catalog items={items}/>
+          { items }
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export {MainPageSection2};
+export { MainPageSection2 }

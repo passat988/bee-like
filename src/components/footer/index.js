@@ -20,7 +20,7 @@ export const Footer = () => {
 
   const handleToast = () => {
     setIsToastVisible(true)
-    setUpdated(Date.now())
+    setUpdated(Math.random())
   }
 
   return (

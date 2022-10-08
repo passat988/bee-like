@@ -1,9 +1,5 @@
-
-
-export const Wrapper = ({ children }) => {
-  return (
-    <div className="wrapper">
-      { children }
-    </div>
-  );
-};
+export const Wrapper = ({ children }) => (
+  <div className="wrapper">
+    { children }
+  </div>
+)

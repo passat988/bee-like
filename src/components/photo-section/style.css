@@ -1,0 +1,42 @@
+.photo-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 30px;
+    background-color: rgba(53, 53, 53, 0.55);
+}
+
+.photo-container img {
+    border-radius: 10px;
+}
+
+.photo-section-paragraph {
+    display: flex;
+    color: var(--font-color);
+    font-family: Oswald, serif;
+    font-size: 25px;
+    padding: 30px 30px;
+    text-align: justify;
+}
+
+.photo-section-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.photo-container {
+    width: 320px;
+    height: 320px;
+}
+
+@media screen and (max-width: 768px) {
+    .photo-section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-section-paragraph {
+        font-size: 17px;
+    }
+}

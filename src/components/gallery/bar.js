@@ -6,6 +6,4 @@ export const GalleryBar = ({ onChange, photos }) => (
       </li>
     )) }
   </ul>
-);
-
-
+)

@@ -1,19 +1,12 @@
 import { BrowserRouter } from 'react-router-dom'
-import { AppRouter, Footer, Header, BackgroundVideo } from './components';
 
 import './styles/main.css'
-import Backendless from "backendless";
-import { useEffect } from "react";
 
-import config from './configs/backendless'
+import { AppRouter, BackgroundVideo, Footer, Header } from './components'
+import { useBackendless } from './hooks'
 
 function App() {
-  useEffect(() => {
-    const { APP_ID, API_KEY } = config
-
-    Backendless.serverURL = "https://eu-api.backendless.com";
-    Backendless.initApp(APP_ID, API_KEY);
-  }, [])
+  useBackendless()
 
   return (
     <BrowserRouter>
@@ -22,7 +15,7 @@ function App() {
       <AppRouter/>
       <Footer/>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,13 +1,12 @@
-import { Modal } from "../components/modal";
-import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import copyImg from '../styles/img/copy.jpg'
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Offer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  useEffect(() => {
-    console.log(isModalOpen);
-  },);
+import copyImg from '../components/footer/copy.jpg'
+import { Modal } from '../components/modal'
+
+export const Offer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <div className="wrapper">
       <section className="main-page-section main-page-section2">
@@ -49,14 +48,9 @@ const Offer = () => {
                 </NavLink>
               </div>
               <button
-                id="myBtn"
                 className="catalog-link-button catalog-link"
                 value="Форма для замовлення"
-                onClick={ () => {
-                  setIsModalOpen(true)
-                  console.log(isModalOpen)
-                }
-                }
+                onClick={ () => setIsModalOpen(true) }
               >
                 Форма для замовлення
               </button>
@@ -66,6 +60,5 @@ const Offer = () => {
         </div>
       </section>
     </div>
-  );
-};
-export { Offer };
+  )
+}
